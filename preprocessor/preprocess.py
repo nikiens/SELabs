@@ -2,6 +2,7 @@ import spacy
 import nltk
 
 from nltk.stem.porter import *
+from nltk.stem import WordNetLemmatizer
 
 def tokenize(text):
 	out = []
@@ -21,5 +22,14 @@ def stem(doc):
 
 	for token in doc:
 		out.append(stemmer.stem(token))
+
+	return out
+
+def lemmatize(doc):
+	out = []
+	lemmatizer = WordNetLemmatizer()
+
+	for token in doc:
+		out.append(lemmatizer.lemmatize(token))
 
 	return out
