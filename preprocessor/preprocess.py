@@ -3,6 +3,7 @@ import nltk
 
 from nltk.stem.porter import *
 from nltk.stem import WordNetLemmatizer
+from nltk.corpus import stopwords
 
 def tokenize(text):
 	out = []
@@ -31,5 +32,16 @@ def lemmatize(doc):
 
 	for token in doc:
 		out.append(lemmatizer.lemmatize(token))
+
+	return out
+
+def remove_stopwords(doc):
+	out = []
+
+	stop_words = set(stopwords.words("english"))
+
+	for token in doc:
+		 if token not in stop_words:
+		 	out.append(token)
 
 	return out
