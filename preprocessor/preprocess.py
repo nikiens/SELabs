@@ -8,3 +8,6 @@ def tokenize(text):
 		out.append(token.text)
 
 	return out
+
+def lowercase(text):
+	return text.lower().split()
