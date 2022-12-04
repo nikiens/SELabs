@@ -1,4 +1,7 @@
 import spacy
+import nltk
+
+from nltk.stem.porter import *
 
 def tokenize(text):
 	out = []
@@ -11,3 +14,12 @@ def tokenize(text):
 
 def lowercase(text):
 	return text.lower().split()
+
+def stem(doc):
+	out = []
+	stemmer = PorterStemmer()
+
+	for token in doc:
+		out.append(stemmer.stem(token))
+
+	return out
