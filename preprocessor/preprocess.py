@@ -45,3 +45,40 @@ def remove_stopwords(doc):
 		 	out.append(token)
 
 	return out
+
+if __name__ == "__main__":
+	st.title("Basic text preprocessor for NLP tasks")
+
+	message = st.text_area("Enter text", "Type here")
+	if st.checkbox("Tokenize"):
+		result = tokenize(message)
+		st.success(result)
+
+	if st.checkbox("Lowercase"):
+		result = lowercase(message)
+		st.success(result)
+
+	if st.checkbox("Stem"):
+		result = stem(tokenize(message))
+		st.success(result)
+
+	if st.checkbox("Lemmatize"):
+		result = lemmatize(tokenize(message))
+		st.success(result)
+
+	if st.checkbox("Remove stopwords"):
+		result = remove_stopwords(tokenize(message))
+		st.success(result)
+
+	st.sidebar.subheader("Software Engineering Lab 2")
+	st.sidebar.markdown(
+		"""
+		#### Supported features:
+		+ Tokenization
+		+ Lowercase convert
+		+ Stemming
+		+ Lemmatization
+		+ Stop words cleaning
+		"""
+	)
+
