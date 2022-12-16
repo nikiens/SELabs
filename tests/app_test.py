@@ -2,9 +2,9 @@ import unittest
 import sys
 import os
 
-sys.path.append(os.path.abspath("../preprocessor/"))
+#sys.path.append(os.path.abspath("../preprocessor/"))
 
-from preprocess import *
+from preprocessor.preprocess import *
 
 class TestMethods(unittest.TestCase):
 
