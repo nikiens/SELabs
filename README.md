@@ -18,3 +18,7 @@ https://docs.google.com/spreadsheets/d/e/2PACX-1vTKFJyti4QLHsscOlGAzsBm6SmILgtVA
 
 ## Демонстрация работы
 ![example](/img/example.png)
+
+## Тесты
+Main: [![tests pass status](https://github.com/nikiens/SELabs/actions/workflows/tests.yml/badge.svg?branch=main)](https://https://github.com/nikiens/SELabs/actions/workflows/tests.yml)
+Develop: [![tests pass status](https://github.com/nikiens/SELabs/actions/workflows/tests.yml/badge.svg?branch=develop)](https://github.com/nikiens/SELabs/actions/workflows/tests.yml)
